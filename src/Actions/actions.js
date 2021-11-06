@@ -5,6 +5,8 @@ import {
     FOTOS_LOAD_START,
     FOTOS_LOAD_SUCCESS
 } from "../Constants/Constants";
+import pict from "../redux/picture";
+import picture from "../redux/picture";
 
 export const LoadAlboom=()=>{
     return function (dispatch){
@@ -37,11 +39,16 @@ export const LoadFotos=()=>{
     }
 
 }
-export const LoadAlboomItem=(id)=>{
-    return{
 
-          type:`ALBOOM_ITEM_CLICK`,
-          payload:id
-
+export const setFilterText=(text)=> {
+    return {
+        type: 'FOTOS_FILTER',
+        payload: text
+    }
+}
+export const setPicture_Click=(picture)=> {
+    return {
+        type: 'PICTURE_CLICK',
+        payload: !picture
     }
 }

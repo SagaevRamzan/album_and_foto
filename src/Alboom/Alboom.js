@@ -1,17 +1,13 @@
-import {useDispatch} from "react-redux";
-import {LoadAlboomItem} from "../Actions/actions";
+import {Link} from "react-router-dom";
 
 
 function Alboom(props){
-     const dispatch=useDispatch();
 
-     const handleClickFoto=()=> {
-         dispatch(LoadAlboomItem(props.alboom.id))
-     }
-
-
-    return <div className="alb_id" onClick={handleClickFoto}><a href="#" className="ssylka">{props.alboom.title}</a></div>
-
+    return <div className="alb_id" >
+        <Link to={`/${props.alboom.id}`}>
+            <a className="ssylka">{props.alboom.title}</a>
+        </Link>
+           </div>
 
 }
 

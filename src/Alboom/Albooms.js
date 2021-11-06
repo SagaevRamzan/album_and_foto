@@ -2,7 +2,7 @@ import {useSelector} from "react-redux";
 import Alboom from "./Alboom";
 
 function Albooms(){
-const albooms=useSelector(state=>state.albooms);
+const albooms=useSelector(state=>state.albooms.albooms);
 
 
     return <div className="alb_id">
